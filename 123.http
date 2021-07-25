@@ -1,0 +1,50 @@
+
+@host = https://localhost:44396
+//@host = https://localhost:5001
+//@host = https://0.0.0.0:80
+
+###
+GET {{host}}/api/DirectoryOnes
+
+###
+POST {{host}}/api/DirectoryOnes
+Content-Type: application/json
+
+{
+    "Name": "one"
+}
+
+###
+DELETE {host}/api/DirectoryOnes/1
+
+
+======================AutoMapper=========================
+###
+GET {{host}}/api/GetAutoMapperUsers
+
+###
+POST {{host}}/api/AutoMapperUsers
+Content-Type: application/json
+
+{
+    "FirstName": "Black",
+    "LastName" : "White",
+    "Email": "blackW@mail.ru"
+}
+
+
+======================JwtToken==========================
+###
+POST {{host}}/api/token
+Content-Type: application/json
+
+{
+    "Login" : "qwerty@gmail.com",
+    "Password" : "123456789"
+}
+
+
+===================SMTP MailKit========================
+
+###
+POST {{host}}/mailkit/send
