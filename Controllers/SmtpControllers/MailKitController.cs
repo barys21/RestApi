@@ -14,7 +14,7 @@ namespace RestApi.Controllers
         public async Task<IActionResult> SendMessage()
         {
             EmailService emailService = new EmailService();
-            await emailService.SendEmailAsync("serikzhunu@gmail.com", "Тема письма", "Тест SMTP - Салам!");
+            await emailService.SendEmailAsync("*********@gmail.com", "Тема письма", "Тест SMTP - Салам!");
             return RedirectToAction("Index");
         }
     }
